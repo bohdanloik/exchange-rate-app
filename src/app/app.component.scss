@@ -1,0 +1,29 @@
+.app-wrapp {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &-content {
+        flex: 1;
+    }
+}
+
+.main {
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.converter {
+    width: 80%;
+
+    @media screen and (min-width: 576px) {
+        width: 400px;
+    }
+}

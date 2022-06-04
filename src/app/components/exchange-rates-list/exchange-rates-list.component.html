@@ -1,0 +1,10 @@
+<div *ngIf="rates; else loaderTmpl" class="rates">
+    <div *ngFor="let rate of rates | keyvalue" class="rates-item">
+        <span>1 {{ rate.key }}/ </span>
+        <span>{{ 1 / rate.value | number: "1.0-2" }} {{ baseCurrency }}</span>
+    </div>
+</div>
+
+<ng-template #loaderTmpl>
+    <mat-progress-bar mode="query"></mat-progress-bar>
+</ng-template>

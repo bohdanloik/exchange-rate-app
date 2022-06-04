@@ -1,0 +1,13 @@
+.header {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 1.5rem;
+
+    &.mat-toolbar-single-row {
+        height: auto;
+    }
+
+    &-title {
+        margin-right: 2rem;
+    }
+}

@@ -1,0 +1,30 @@
+.card {
+    text-align: center;
+}
+
+.field-group {
+    width: 100%;
+
+    ::ng-deep {
+        .mat-form-field-wrapper {
+            padding: 0;
+        }
+
+        .mat-form-field-infix {
+            display: flex;
+
+            .mat-input-element {
+                max-width: 30%;
+
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                }
+            }
+
+            .mat-select {
+                max-width: 70%;
+            }
+        }
+    }
+}

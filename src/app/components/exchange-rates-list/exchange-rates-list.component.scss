@@ -1,0 +1,14 @@
+:host {
+    flex-grow: 1;
+}
+
+.rates {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+    &-item {
+        padding: 0.35rem 0.75rem;
+    }
+}

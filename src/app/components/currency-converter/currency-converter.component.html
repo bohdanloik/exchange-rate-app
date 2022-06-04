@@ -1,0 +1,43 @@
+<mat-card class="card">
+    <div>
+        <mat-form-field appearance="outline" class="field-group">
+            <mat-label>Amount</mat-label>
+            <input matInput type="number" [(ngModel)]="amountFrom" (input)="currencyChanged()">
+            <mat-select
+                placeholder="Select currency"
+                [disabled]="!currenciesOptions.length"
+                (selectionChange)="currencyChanged()"
+                [(ngModel)]="currencyFrom"
+            >
+                <mat-option
+                    *ngFor="let item of currenciesOptions"
+                    [value]="item.code"
+                >
+                    {{ item.code }} ({{ item.description }})
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <button mat-icon-button color="primary" (click)="swapCurrencies()">
+        <mat-icon>autorenew</mat-icon>
+    </button>
+    <div>
+        <mat-form-field appearance="outline" class="field-group">
+            <mat-label>Amount</mat-label>
+            <input matInput type="number" [(ngModel)]="amountTo" (input)="amountToChanged()">
+            <mat-select
+                placeholder="Select currency"
+                [disabled]="!currenciesOptions.length"
+                (selectionChange)="currencyChanged()"
+                [(ngModel)]="currencyTo"
+            >
+                <mat-option
+                    *ngFor="let item of currenciesOptions"
+                    [value]="item.code"
+                >
+                    {{ item.code }} ({{ item.description }})
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+</mat-card>
